@@ -12,7 +12,7 @@ import Router from './layout/Router'
 const Layout = ({children}) => (
   <Site>
     <Helmet
-      title="Josh is Awesome"
+      title="Josh has a blog"
       meta={[
       {
         name: 'description',
