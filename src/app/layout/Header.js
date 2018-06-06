@@ -32,7 +32,7 @@ class Header extends React.Component {
               borderBottomRightRadius: '50%',
               marginRight: 15
             }}
-              src="https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAU3AAAAJGE1MzYxNzYzLTE1NTUtNDEyYi04MzRjLTgzZjNkOGU0MGIzNg.jpg"
+              src="https://i.imgur.com/rytWFWm.jpg"
               width="30px"
               alt=""/>
             <span>JoshuaSchoenfeld.website</span>
