@@ -14,7 +14,6 @@ class Blog extends Component {
     this
       .fetchPosts()
       .then(this.setPosts)
-      .then(console.log("Posts set"))
   }
 
   fetchPosts = () => this
