@@ -6,11 +6,11 @@ const Footer = () => (
     <div className="container">
       <div className="content has-text-centered">
         <p>
-          Built on&nbsp;
-          <strong>&nbsp;React&nbsp;
-          </strong>&nbsp;with&nbsp;
-          <strong>&nbsp;Bulma&nbsp;
-          </strong>&nbsp;by&nbsp;
+          Built on&nbsp
+          <strong>&nbspReact&nbsp
+          </strong>&nbspwith&nbsp
+          <strong>&nbspBulma&nbsp
+          </strong>&nbspby&nbsp
           <a href="https://github.com/brocier">Joshua Schoenfeld</a>
           <br/>
           Copyright 2018

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const PageHeader = (props) => {
   return (
@@ -14,7 +14,7 @@ const PageHeader = (props) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default PageHeader;
+export default PageHeader
