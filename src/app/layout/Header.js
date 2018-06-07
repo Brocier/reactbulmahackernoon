@@ -83,18 +83,20 @@ class Header extends React.Component {
                   This Site
                 </a>
                 <a className="navbar-item">
-                  Angular The React Way
+                  React The Redux Way
                 </a>
               </div>
             </div>
           </div>
           <div className="navbar-end">
-            <a className="navbar-item" href="https://github.com/aaronklaser">
+            <a className="navbar-item" href="https://github.com/brocier">
+              GitHub
               <span className="icon">
                 <i className="fab fa-lg fa-github"></i>
               </span>
             </a>
-            <a className="navbar-item" href="https://twitter.com/awklaser">
+            <a className="navbar-item" href="https://twitter.com/JoshSchoenfeld">
+              Twitter
               <span
                 className="icon has-text-info"
                 style={{
@@ -103,7 +105,7 @@ class Header extends React.Component {
                 <i className="fab fa-lg fa-twitter"></i>
               </span>
             </a>
-            <a className="navbar-item" href="http://resume.aaronklaser.com">
+            <a className="navbar-item" href="http://hello-world-portfolio.bitballoon.com/">
               Resume
               <span
                 className="icon"
