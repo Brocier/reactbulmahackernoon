@@ -1,39 +1,11 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
 import PageHeader from './components/PageHeader'
 import PageContent from './components/PageContent'
 import MediumItem from './medium/MediumItem.js'
-import axios from 'axios'
+import Loader from './components/Loader.js'
 
 class Medium extends Component {
-
-  state = {
-    posts: []
-  }
-
-  componentDidMount() {
-    this
-      .fetchPosts()
-      .then(this.setPosts)
-  }
-
-  fetchPosts = () => axios.get(`https://cors.now.sh/https://us-central1-aaronklaser-1.cloudfunctions.net/medium?username=@jschoe04`)
-
-  setPosts = ({data}) => {
-    const {Post} = data.payload.references
-    const posts = Object
-      .values(Post)
-      .map(({id, title, createdAt, virtuals, uniqueSlug}) => Object.assign({}, {
-        title,
-        createdAt,
-        subtitle: virtuals.subtitle,
-        image: virtuals.previewImage.imageId
-          ? `https://cdn-images-1.medium.com/max/800/${virtuals.previewImage.imageId}`
-          : null,
-        url: `https://medium.com/@jschoe04/${uniqueSlug}`
-      }))
-    this.setState({posts})
-  }
-
   render() {
     return (
       <div>
@@ -53,14 +25,22 @@ class Medium extends Component {
             </span>
           </a>
         </PageHeader>
-        <PageContent>
-          {this
-            .state
-            .posts
-            .map((posts, i) => <MediumItem key={i} {...posts}/>)}
-        </PageContent>
+
+        {this.props.medium.loading
+          ? <Loader className="has-text-success"></Loader>
+          : <PageContent>
+            {this
+              .props
+              .medium
+              .posts
+              .map((posts, i) => <MediumItem key={i} {...posts}/>)}
+          </PageContent>}
       </div>
     )
   }
 }
-export default Medium
+function mapStateToProps(state) {
+  return {medium: state.medium}
+}
+
+export default connect(mapStateToProps)(Medium)
