@@ -28,7 +28,7 @@ class Blog extends Component {
     )
   }
 }
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state) {
   return {blog: state.blog}
 }
 
