@@ -8,11 +8,8 @@ import registerServiceWorker from './registerServiceWorker';
 // Redux Store
 import {Provider} from 'react-redux'
 import {configureStore} from './store'
-// import {loadBlog} from './store/Blog.js' import {loadMedium} from
-// './store/Medium.js'
 
 const store = configureStore()
-// store.dispatch(loadBlog()) store.dispatch(loadMedium())
 
 ReactDOM.render((
   <Provider store={store}>

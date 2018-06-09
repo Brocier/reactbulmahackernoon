@@ -1,7 +1,7 @@
 /**Blog Reducer**/
 import initialState from './../intitialState.js'
-import * as types from './types'
-import {createReducer} from './../Utilities'
+import * as types from './types.js'
+import {createReducer} from './../Utilities.js'
 
 export default createReducer(initialState.blog, {
   [types.GET_BLOG_ASYNC.PENDING](state) {
@@ -24,9 +24,3 @@ export default createReducer(initialState.blog, {
     }
   }
 })
-
-// export default function blogReducer(state = initialState.blog, action) {
-// switch (action.type) {     case types.BLOG_LOADING:       return { ...state,
-//        loading: action.isLoading       }     case types.LOAD_BLOG_SUCCESS:
-//    return {         ...state,         posts: action.post,         loading:
-// false       }     default:       return state } }
